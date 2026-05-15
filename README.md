@@ -23,7 +23,7 @@ After reviewing the endsem architecture, I identified four critical flaws in usi
 ---
 
 ### Phase 3: Post-Endsem (The PGAT-IM Architecture)
-To solve these bottlenecks, I abandoned standard library GNNs and engineered **PGAT-IM (Probability-Gated Attention Network) a custom layer mathematically aligned with the IC/LT diffusion rules.
+To solve these bottlenecks, I abandoned standard library GNNs and engineered **PGAT-IM (Probability-Gated Attention Network)** a custom layer mathematically aligned with the IC/LT diffusion rules.
 
 Here is what I added in PGAT-IM that does not exist in standard architectures:
 * **Probability Gate ($g_{ij}$):** Intercepted the pre-softmax attention logit with a learned `tanh` gate. This actively throttles neural attention if the physical edge transmission probability ($p_{ij}$) is weak.
